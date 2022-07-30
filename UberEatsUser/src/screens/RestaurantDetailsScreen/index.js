@@ -1,5 +1,6 @@
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
 import restaurants from "../../../data/restaurants.json";
 const restaurant = restaurants[0];
@@ -8,6 +9,10 @@ const RestaurantDetailsScreen = () => {
   return (
     <View style={styles.page}>
       <Image source={{ uri: restaurant.image }} style={styles.image} />
+      <LinearGradient
+        colors={["rgba(0,0,0,0.8)", "transparent"]}
+        style={styles.background}
+      ></LinearGradient>
 
       <Ionicons
         name="arrow-back-circle"
@@ -53,5 +58,12 @@ const styles = StyleSheet.create({
   subtitle: {
     color: "#525252",
     fontSize: 15,
+  },
+  background: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 200,
   },
 });
