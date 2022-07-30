@@ -9,6 +9,7 @@ export default function App() {
       <FlatList
         data={restaurants}
         renderItem={({ item }) => <RestaurantItem restaurant={item} />}
+        showsVerticalScrollIndicator={false}
       />
       <StatusBar style="auto" />
     </View>
@@ -22,5 +23,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
+    paddingVertical: 50,
   },
 });
