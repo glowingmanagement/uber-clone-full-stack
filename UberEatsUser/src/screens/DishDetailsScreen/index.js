@@ -19,6 +19,10 @@ const DishDetailsScreen = () => {
     setQuantity(quantity + 1);
   };
 
+  const getTotal = () => {
+    return (dish.price * quantity).toFixed(1);
+  };
+
   return (
     <View style={styles.page}>
       <Text style={styles.name}>{dish.name}</Text>
@@ -38,6 +42,11 @@ const DishDetailsScreen = () => {
           color={"black"}
           onPress={onPlus}
         />
+      </View>
+      <View style={styles.button}>
+        <Text style={styles.buttonText}>
+          Add {quantity} to basket &#8226; £{getTotal()}0
+        </Text>
       </View>
     </View>
   );
@@ -74,5 +83,16 @@ const styles = StyleSheet.create({
   quantity: {
     fontSize: 25,
     marginHorizontal: 20,
+  },
+  button: {
+    backgroundColor: "black",
+    marginTop: "auto",
+    padding: 20,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "600",
+    fontSize: 20,
   },
 });
