@@ -4,11 +4,12 @@ import HomeScreen from "./src/screens/HomeScreen";
 import RestaurantDetailsScreen from "./src/screens/RestaurantDetailsScreen";
 import DishDetailsScreen from "./src/screens/DishDetailsScreen";
 import BasketScreen from "./src/screens/BasketScreen";
+import OrderScreen from "./src/screens/OrdersScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <BasketScreen />
+      <OrderScreen />
       <StatusBar style="light" />
     </View>
   );
