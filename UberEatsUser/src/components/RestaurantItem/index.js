@@ -20,7 +20,7 @@ const RestaurantItem = ({ restaurant }) => {
         <View>
           <Text style={styles.title}>{restaurant.name}</Text>
           <Text style={styles.subtitle}>
-            £{restaurant.deliveryFee}0 &#8226; {restaurant.minDeliveryTime}-
+            £{restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
             {restaurant.maxDeliveryTime} minutes
           </Text>
         </View>
